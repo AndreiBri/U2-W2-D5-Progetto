@@ -1,0 +1,70 @@
+@import "./functions";
+
+$bgNetflix: hsl(0, 4%, 11%);
+
+@import "./variables";
+
+$h7-font-size: $font-size-base * 0.875;
+$h8-font-size: $font-size-base * 0.75;
+$h9-font-size: $font-size-base * 0.625;
+$h10-font-size: $font-size-base * 0.5;
+
+$custom-font-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+);
+
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+$custom-theme-colors: (
+  "Netflix": $bgNetflix,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+nav {
+  img {
+    width: 125px;
+  }
+}
+
+ul {
+  li {
+    a {
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+.movie-card {
+  /* IMPEDISCE alle card di rimpicciolirsi per stare tutte nello schermo */
+  flex: 0 0 auto;
+}
+
+/* Opzionale: Nasconde la barra di scorrimento sui browser */
+.custom-slider::-webkit-scrollbar {
+  display: none;
+}
+.custom-slider {
+  scrollbar-width: none;
+}
+
+footer {
+  section {
+    div {
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.iconfooter {
+  margin-bottom: 1rem;
+}
+
+@import "./bootstrap.scss";

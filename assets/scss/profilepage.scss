@@ -1,0 +1,183 @@
+@import "./functions";
+
+$bgNetflix: hsl(0, 4%, 11%);
+$profilebg: linear-gradient(178deg, rgba(20, 20, 20, 1) 0%, rgba(0, 0, 0, 1) 100%);
+
+@import "./variables";
+
+$h7-font-size: $font-size-base * 0.875;
+$h8-font-size: $font-size-base * 0.75;
+$h9-font-size: $font-size-base * 0.625;
+$h10-font-size: $font-size-base * 0.5;
+
+$custom-font-sizes: (
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+);
+
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+$custom-theme-colors: (
+  "Netflix": $bgNetflix,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+nav {
+  img {
+    width: 125px;
+  }
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.topbar {
+  padding: 24px 48px;
+  background: hsl(0, 4%, 11%);
+
+  img {
+    width: 95px;
+  }
+}
+
+.edit-profile {
+  max-width: 980px;
+  margin: 60px auto 0;
+}
+
+.edit-profile h1 {
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0 0 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 40px;
+}
+
+.avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.right-column {
+  width: 430px;
+}
+
+/* NOME */
+.name-input {
+  width: 100%;
+  background: #666;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 14px;
+  margin-bottom: 28px;
+}
+
+/* SEZIONI */
+.section {
+  border-bottom: 1px solid #333;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+}
+
+.section label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section select {
+  background: #000;
+  border: 1px solid #666;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* MATURITY */
+.pill {
+  background: #333;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+}
+
+.hint {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #777;
+  color: #ccc;
+  padding: 6px 18px;
+  font-size: 13px;
+}
+
+/* AUTOPLAY */
+.autoplay-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.autoplay-option input {
+  width: 18px;
+  height: 18px;
+}
+
+/* AZIONI */
+.actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.actions button {
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 26px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #fff;
+  color: #000;
+  border: none;
+}
+
+.secondary,
+.danger {
+  background: transparent;
+  border: 1px solid #777;
+  color: #aaa;
+}
+
+.profile-header.mobile-stack {
+  flex-direction: row;
+}
+
+@media (max-width: 767px) {
+  .profile-header.mobile-stack {
+    flex-direction: column;
+  }
+}
+@import "./bootstrap.scss";

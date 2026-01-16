@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/scss/profilepage.css" />
+    <title>Edit Profile</title>
+  </head>
+
+  <body class="bg-Netflix">
+    <header class="topbar">
+      <img src="./assets/imgs/netflix_logo.png" alt="Netflix" />
+    </header>
+
+    <main>
+      <section class="edit-profile d-flex flex-column justify-content-center align-items-center d-md-block px-md-5 px-lg-0">
+        <h1 class="text-light">Edit Profile</h1>
+
+        <div class="profile-header mobile-stack align-content-lg-center justify-content-md-center">
+          <div class="avatar">
+            <img src="./assets/imgs/avatar.png" alt="avatar" />
+          </div>
+
+          <div class="right-column">
+            <input class="name-input" type="text" value="Strive Student" />
+
+            <div class="section">
+              <label class="text-light">Language:</label>
+              <select>
+                <option>English</option>
+              </select>
+            </div>
+
+            <div class="section text-light">
+              <label>Maturity Settings:</label>
+              <button class="pill">ALL MATURITY RATINGS</button>
+              <p class="hint">Show titles of all maturity ratings for this profile.</p>
+              <button class="outline">EDIT</button>
+            </div>
+
+            <div class="section text-light border-bottom-0">
+              <label>Autoplay controls</label>
+              <div class="autoplay-option">
+                <input type="checkbox" checked />
+                <span>Autoplay next episode in a series on all devices.</span>
+              </div>
+              <div class="autoplay-option">
+                <input type="checkbox" checked />
+                <span>Autoplay previews while browsing on all devices.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="actions border-top pt-4 pb-5">
+          <button class="primary">SAVE</button>
+          <button class="secondary">CANCEL</button>
+          <button class="danger">DELETE PROFILE</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
