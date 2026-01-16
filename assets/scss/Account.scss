@@ -1,0 +1,21 @@
+@import "./functions";
+
+@import "./variables";
+
+nav {
+  img {
+    width: 125px;
+  }
+}
+
+ul {
+  li {
+    a {
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@import "./bootstrap.scss";
